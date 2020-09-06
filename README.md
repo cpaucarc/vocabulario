@@ -1,8 +1,8 @@
 # Vocabularios
 ## Generalidades
 **Curso: Teoria de Lenguajes.**
-**Docente: ** Ing. Silva Zapata Miguel
-**Integrantes: **
+**Docente:** Ing. Silva Zapata Miguel
+**Integrantes:**
 - Alva Sánchez Andher
 - Chávez Cabana Alexander
 - Gonzales Yanac Eduardo
