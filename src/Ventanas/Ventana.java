@@ -75,6 +75,7 @@ public class Ventana extends javax.swing.JFrame {
 
     public void crearNuevoVocabulario() {
         if(!auxiliar.isEmpty()){
+            cantidadVocabulario++;
             ArrayList<String> vocabulario = new ArrayList<>(auxiliar);
             vocabularios.add(vocabulario);
             auxiliar.clear();
@@ -82,7 +83,7 @@ public class Ventana extends javax.swing.JFrame {
             campo.grabFocus();
             mostrarContenidoVocabulario(vocabularios);
         }else{
-            JOptionPane.showMessageDialog(null, "El vocabulario no puede estar vacio");
+            JOptionPane.showMessageDialog(null, "El vocabulario "+cantidadVocabulario+" no puede estar vacio");
         }
     }
 
@@ -142,6 +143,7 @@ public class Ventana extends javax.swing.JFrame {
         lbCantidadVocabulario.setText("jLabel2");
         jPanel1.add(lbCantidadVocabulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 310, 30));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
@@ -159,7 +161,6 @@ public class Ventana extends javax.swing.JFrame {
 
     private void nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoActionPerformed
         if (cantidadVocabulario < 5) {
-            cantidadVocabulario++;
             crearNuevoVocabulario();
         } else {
             JOptionPane.showMessageDialog(null, "Solo se puede crear hasta un maximo de 5 vocabularios.");
