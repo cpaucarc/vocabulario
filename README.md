@@ -19,16 +19,16 @@ programa la estrategia necesaria para ese aspecto).
 
 ## **Solución**
 Este repositorio contiene el codigo fuente de la solucion, el cual esta escrito en Java.
-#### Lenguaje y librerias necesarias
+### Lenguaje y librerias necesarias
 **Lenguaje:** Java 8
 **IDE:** NetBeans 8.2
 **Librerias Externas:** Ninguna
 
-#### Nota
+### Nota
 Si solo desea ejecutar el programa, descargue el archivo **.jar** de la carpeta **dist** o ingresando [Aqui](http:/https://github.com/cpaucarc/vocabulario/blob/master/dist/Vocabulario.jar/ "Aqui").
 
 
-#### Capturas del programa
+### Capturas del programa
 ![interfaz](https://user-images.githubusercontent.com/52868996/92331976-f0b1a000-f03f-11ea-9038-d523e7d4358f.png)
 > Interfaz del programa.
 
