@@ -1,5 +1,5 @@
 # Vocabularios
-##Generalidades
+## Generalidades
 **Curso: Teoria de Lenguajes.**
 **Docente: ** Ing. Silva Zapata Miguel
 **Integrantes: **
