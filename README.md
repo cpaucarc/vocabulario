@@ -7,6 +7,9 @@
 - Chávez Cabana Alexander
 - Gonzales Yanac Eduardo
 - Paucar Colonia Frank
+-	Calderón Castillo Antony Javier
+-	Carrera Huaranga Glicerio Belardino
+-	Guillen Hinostroza Jhon Eduardo
 
 
 ## **Planteamieno del problema**
