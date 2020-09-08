@@ -1,16 +1,14 @@
 package Ventanas;
 
 import java.util.ArrayList;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class Ventana extends javax.swing.JFrame {
 
     int cantidadVocabulario = 1; //Hasta un maximo de 5
-    String[] palabrasReservadas = new String[]{"abstract", "assert", "boolean", "break", "byte", "case", "catch", "char", "class", "const", "continue", "default", "do", "double", "else", "enum", "extends", "final", "finally", "float", "for", "goto", "if", "implements", "import", "instanceof", "int", "interface", "long", "native", "new", "package", "private", "protected", "public", "return", "short", "static", "strictfp", "super", "switch", "synchronized", "this", "throw", "throws", "transient", "try", "void", "volatile", "while"};
+    String[] palabrasReservadas = new String[]{"abstract", "assert", "boolean", "break", "byte", "case", "catch", "char", "class", "const", "continue", "default", "do", "double", "else", "enum", "extends", "final", "finally", "float", "for", "goto", "if", "implements", "import", "instanceof", "int", "interface", "long", "native", "new", "package", "private", "protected", "public", "return", "short", "static", "strictfp", "super", "switch", "synchronized", "this", "throw", "throws", "transient", "try", "void", "volatile", "while", "&&", "||", "true", "false"};
     ArrayList<ArrayList<String>> vocabularios = new ArrayList<>();
     ArrayList<String> auxiliar = new ArrayList<>();
-    JLabel label;
 
     public Ventana() {
         initComponents();
@@ -31,23 +29,18 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public void agregarAVocabulario(ArrayList<String> vocabulario, String elemento) {
-        if (vocabulario.size() <= 8) {
+        if (vocabulario.size() < 8) {
             if (elemento.length() == 1 || buscarEnPalabrasReservadas(elemento)) {
                 if (!vocabulario.contains(elemento)) {
                     vocabulario.add(elemento);
                     campo.setText(null);
                     campo.grabFocus();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Este elemento '" + elemento + "' ya existe en el vocabulario");
-                    campo.select(0, campo.getText().length()-1);
-                }
-            } else {
-                JOptionPane.showMessageDialog(null, "La palabra '" + elemento + "' no es un simbolo.");
-                campo.select(0, campo.getText().length());
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Solo puede ingresar 8 elementos al vocabulario");
-        }
+                } else
+                    JOptionPane.showMessageDialog(null, "Este elemento '" + elemento + "' ya existe en el vocabulario");                
+            } else
+                JOptionPane.showMessageDialog(null, "La palabra '" + elemento + "' no es un simbolo.");            
+        } else
+            JOptionPane.showMessageDialog(null, "Solo puede ingresar 8 elementos al vocabulario");        
     }
 
     public void mostrarContenidoVocabulario(ArrayList<ArrayList<String>> vocabularios) {
